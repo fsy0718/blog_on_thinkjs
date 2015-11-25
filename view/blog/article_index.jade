@@ -1,0 +1,15 @@
+extends ../global/_layout
+
+block pageTitle
+  title 这是文章首页
+
+block pageContent
+  h1
+    这是文章内容
+  if list.length
+    ul.list
+      for article,index in list
+        li
+          h1=article.title
+          p=article.author
+          p=article.time
